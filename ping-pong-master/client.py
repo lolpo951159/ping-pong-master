@@ -7,6 +7,8 @@ mixer.init()
 sound_wall = mixer.Sound("pop.wav")
 sound_paddle = mixer.Sound("pop.wav")
 
+kortinko = image.load ('Без имени.jpeg')
+kortinko = transform.scale (kortinko,(1000,1000))
 
 # --- Налаштування ---
 WIDTH, HEIGHT = 800, 600
@@ -74,6 +76,8 @@ while True:
     for e in event.get():
         if e.type == QUIT:
             exit()
+
+    screen.blit(kortinko, (0, 00))
 
     if "countdown" in game_state and game_state["countdown"] > 0:
         screen.fill((0, 0, 0))
